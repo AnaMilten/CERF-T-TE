@@ -71,13 +71,16 @@ h1{
 
 
 /*NAVBAR DAMIEN*/
+#nav {
+    background-color:#CECECECE;
+    }
+    
 .navbar .nav-header img {
     max-height: 50px;
-} 
-.navbar-nav
-{
-    flex-grow: 1 !important;
-}
+    } 
+    
+.dropdown-menu {
+    min-width: 60px !important;
 /* methode de police selon la taille de l'écran la taille de la police dans le carrousel */
 
 .carousel-caption h5

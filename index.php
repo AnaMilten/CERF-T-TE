@@ -16,39 +16,39 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
     </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css" rel="stylesheet"/>
 
 </head>
 
 <body>
     <!--NAVBAR-->
-    <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light w-100">
-        <div class="container-fluid" id="nav">
-            <div class="nav-header  d-flex flex-row w-25">
-                <a class="navbar-brand" href="#nav">
-                    <a href="#nav"><img src="images/cerf-wildx-seul.png" class="img-fluid" width="50" alt="">
-                        <img src="images/wildx-seul.png" class="img-fluid" width="80" alt=""></a>
-                </a>
+    <nav  class="navbar sticky-top navbar-expand-lg navbar-light" id="nav">
+        <div class="nav-header  d-flex flex-row">
+            <a class="navbar-brand" href="#nav">
+                <img src="images/cerf-wildx-seul.png" class="img-fluid" width="50" alt="">
+                <img src="images/wildx-seul.png"  class="img-fluid" width="80" alt="">
+            </a>
+        </div>
+        <div class="language-picker ml-auto">
+            <div class="nav-item dropdown mr-2">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php if (isset($_SESSION['lang'])) echo '<span class='.'"flag-icon flag-icon-'.$_SESSION['lang'].'"'."></span>"?></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/index.php?lang=fr"><span class="flag-icon flag-icon-fr"></span></a></li>
+                    <li><a href="/index.php?lang=gb"><span class="flag-icon flag-icon-gb"></span></a></li>
+                    <li><a href="/index.php?lang=es"><span class="flag-icon flag-icon-es"></span></a></li>
+                    <li><a href="/index.php?lang=jp"><span class="flag-icon flag-icon-jp"></span></a></li>
+                </ul>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav w-100">
-                    <a class="nav-link w-25 js-scrollTo" href="#a-quoi">A quoi sert il ? <span class="sr-only">(current)</span></a>
-                    <a class="nav-link w-25 js-scrollTo" href="#fonction">Fonctionnalités</a>
-                    <a class="nav-link w-25 js-scrollTo" href="#contact">Pré-réservation</a>
-                    <a class="nav-link w-25 js-scrollTo" href="#apropos">Qui sommes-nous ?</a>
-                    <div class="dropdown" href="#">
-                        <a class="dropdown-toggle w-25" data-toggle="dropdown" href="#">FR</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">FR</a></li>
-                            <li><a href="#">EN</a></li>
-                            <li><a href="#">ESP</a></li>
-                            <li><a href="#">JAP</a></li>
-                        </ul>
-                    </div>
-                </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav justify-content-around w-100">
+                <a class="nav-link js-scrollTo" href="#a-quoi"><?php echo USEFULLNESS;?><span class="sr-only">(current)</span></a>
+                <a class="nav-link js-scrollTo" href="#fonction"><?php echo FEATURES;?></a>
+                <a class="nav-link js-scrollTo" href="#contact"><?php echo BOOKING;?></a>
+                <a class="nav-link js-scrollTo" href="#apropos"><?php echo WHOAMI;?></a>
             </div>
         </div>
     </nav>
